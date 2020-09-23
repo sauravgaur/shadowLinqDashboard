@@ -1,0 +1,27 @@
+.cls-container{
+    padding: 40px 8% 0 8%;
+}
+.cls-create-btn{
+    text-align: center;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #d8d5d5;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+.cls-create-btn label{
+    position: absolute;
+    color: #ccc;
+    font-size: 20px;
+    bottom: -10px;
+    background-color: #fafafa;
+    padding: 0 15px;
+    right: 47%;
+}
+.cls-container .cls-venue-list{
+    margin-top: 50px;
+}
+
+.cls-container .cls-venue-list table{
+    width: 100%;
+}

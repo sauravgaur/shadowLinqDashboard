@@ -1,0 +1,16 @@
+.cls-frm-container{
+    width: 100%;
+    padding: 25px 10px;
+}
+.cls-frm-container mat-form-field.cls-width-full{
+    width: 100%;
+}
+.cls-frm-container mat-form-field.cls-width-half{
+    width: 45%;
+}
+.cls-frm-container mat-form-field.cls-margin-left{
+    margin-left: 5%; 
+}
+.cls-frm-container mat-form-field.cls-margin-right{
+    margin-right: 5%; 
+}

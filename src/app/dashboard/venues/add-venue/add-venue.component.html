@@ -1,0 +1,108 @@
+<h1 mat-dialog-title> {{title}}</h1>
+<div mat-dialog-content>
+        <mat-vertical-stepper linear="true" #stepper>
+                <mat-step [stepControl]="detailFormGroup">
+                    <div class="cls-frm-container">
+                        <form [formGroup]="detailFormGroup">
+                            <ng-template matStepLabel>Describe Yourself</ng-template>
+                            <div>
+                                <mat-form-field class="cls-width-full">
+                                    <mat-label>Venue name</mat-label>
+                                    <input matInput placeholder="Venue name" formControlName="name" required>
+                                </mat-form-field>
+                            </div>
+                            
+                            <mat-form-field class="cls-width-full">
+                                    <mat-label>Description</mat-label>
+                                    <textarea matInput rows="3" placeholder="Description" formControlName="description" required></textarea>
+                                    </mat-form-field>
+                            <div>
+                                <button mat-raised-button color="primary" matStepperNext>Next</button>
+                            </div>
+                        </form>
+                    </div>
+                  
+                </mat-step>
+                <mat-step [stepControl]="contactFormGroup" label="Your Contact Information">
+                        <div class="cls-frm-container">
+                        <form [formGroup]="contactFormGroup">
+                          <mat-form-field class="cls-width-full">
+                            <mat-label>Manager Name</mat-label>
+                            <input matInput formControlName="manager_name" placeholder="Enter your manager Name"
+                                   required>
+                          </mat-form-field>
+                          <mat-form-field class="cls-width-half cls-margin-right">
+                            <mat-label>Primary Contact Number</mat-label>
+                            <input matInput formControlName="contact_number" placeholder="Enter your contact number"
+                                       required>
+                        </mat-form-field>
+                        <mat-form-field class="cls-width-half cls-margin-left">
+                                <mat-label>Secondary Contact Number</mat-label>
+                                <input matInput formControlName="contact_number1" placeholder="Enter your contact number" required>
+                        </mat-form-field>
+                        <mat-form-field class="cls-width-half cls-margin-right">
+                            <mat-label>Support Email</mat-label>
+                            <input matInput type="email" formControlName="email" placeholder="Enter support email">
+                        </mat-form-field>
+                        <mat-form-field class="cls-width-half cls-margin-left">
+                                <mat-label>Website</mat-label>
+                                <input matInput formControlName="website" placeholder="Enter your Website">
+                            </mat-form-field>
+                          <div>
+                            <button mat-stroked-button style="margin-right: 30px;" color="primary" matStepperPrevious>Back</button>
+                            <button mat-raised-button color="primary" matStepperNext>Next</button>
+                          </div>
+                        </form>
+                        </div>
+                      </mat-step>
+                <mat-step [stepControl]="adrressFormGroup" label="Fill out your address">
+                    <div class="cls-frm-container">
+                  <form [formGroup]="adrressFormGroup">
+                    <mat-form-field class="cls-width-full">
+                      <mat-label>Address Line 1</mat-label>
+                      <input matInput formControlName="adress_line_1" placeholder="Enter your address" required>
+                    </mat-form-field>
+                    <mat-form-field class="cls-width-full">
+                        <mat-label>Address Line 2</mat-label>
+                        <input matInput formControlName="adress_line_2" placeholder="Enter your address" required>
+                    </mat-form-field>
+                    <mat-form-field class="cls-width-half cls-margin-right">
+                        <mat-label>Floor Number</mat-label>
+                        <input matInput type="number" formControlName="floor_number" placeholder="Enter Floor Number">
+                    </mat-form-field>
+                    <mat-form-field class="cls-width-half cls-margin-left">
+                        <mat-label>Zipcode</mat-label>
+                        <input matInput formControlName="pin_code" placeholder="Enter Zipcode">
+                    </mat-form-field>
+                    <mat-form-field class="cls-width-half cls-margin-right">
+                            <mat-label>City</mat-label>
+                            <input matInput formControlName="city" placeholder="Enter City">
+                    </mat-form-field>
+                    <mat-form-field class="cls-width-half cls-margin-left">
+                        <mat-label>State</mat-label>
+                        <input matInput formControlName="state" placeholder="Enter State">
+                    </mat-form-field>
+                    <mat-form-field class="cls-width-half cls-margin-right">
+                            <mat-label>Country</mat-label>
+                            <input matInput formControlName="country" placeholder="Enter Country">
+                    </mat-form-field>
+                    <div>
+                        <button mat-stroked-button style="margin-right: 30px;" color="primary" matStepperPrevious>Back</button>
+                        <button mat-raised-button color="primary" matStepperNext>Next</button>
+                    </div>
+                  </form>
+                  </div>
+                </mat-step>
+                <mat-step>
+                  <ng-template matStepLabel>Done</ng-template>
+                  <p>You are now done.</p>
+                  
+                  <div>
+                    <button mat-stroked-button style="margin-right: 30px;" color="primary" matStepperPrevious>Back</button>
+                    <button mat-raised-button color="primary" (click)="saveVenue()">Submit</button>
+                    <!-- <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button (click)="stepper.reset()">Reset</button> -->
+                  </div>
+                </mat-step>
+              </mat-vertical-stepper>
+</div>

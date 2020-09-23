@@ -1,0 +1,9 @@
+<h1 mat-dialog-title style="text-align: center;
+border-bottom: 1px solid #cccccc;
+padding-bottom: 15px;"> {{title}}</h1>
+<div mat-dialog-content>
+    <qrcode [qrdata]="data" #qrattachedSec [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+</div>
+<div mat-dialog-actions>
+    <button mat-stroked-button (click)="DownloadQR()">Download</button>
+</div>
